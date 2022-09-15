@@ -3,7 +3,7 @@
     z-index: 1;
     position: fixed;
     background-color: rgba(0,0,0,0.4);
-    overflow: auto;
+    overflow: clip;
     width: 100vw;
     height: 100vh;
     left: 0;
@@ -21,7 +21,6 @@
     background-color: whitesmoke;
     text-align: center;
     font-weight: bolder;
-    margin: 30%;
     padding: 30px;
 }
 .taskdiv{
