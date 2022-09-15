@@ -5,3 +5,8 @@ function Calculate() {
     let S = Math.PI*Math.pow(r,2);
     alert(`Length: ${l}\nSqaure: ${S}`);
 }
+
+function CloseModal() {
+    let modal = document.getElementById('Modal');
+    modal.style.display = 'none';
+}

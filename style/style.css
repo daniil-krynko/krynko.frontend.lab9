@@ -4,8 +4,10 @@
     position: fixed;
     background-color: rgba(0,0,0,0.4);
     overflow: auto;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
 }
 .modalBtn{
     background-color: lightgreen;
@@ -23,13 +25,15 @@
     padding: 30px;
 }
 .taskdiv{
+    position: fixed;
     color: whitesmoke;
     text-align: center;
     font-size: larger;
     background-color: royalblue;
     border-color: red;
-    border-width: 150px;
     border-radius: 25%;
-    margin: 50px;
-    padding: 300px;
+    width: 80vw;
+    height: 80vh;
+    line-height: 80vmin;
+    margin: 10%;
 }
