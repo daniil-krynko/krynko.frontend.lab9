@@ -10,7 +10,7 @@ forma.addEventListener("submit", e =>
         return;
     }
     if (pswd.value == login.value) {
-        alert("Password can't be as your login");
+        alert("Password can't be like your login");
         return;
     }
 });
