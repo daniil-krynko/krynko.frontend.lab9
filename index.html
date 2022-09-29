@@ -3,36 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/style.css">
-    <title>Daniil Krynko 205. Lab 2</title>
+    <title>Daniil Krynko 205. Lab 3</title>
 </head>
 <body>
-    <form>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-
-        <label for="login">Login:</label><br>
-        <input type="text" id="login" name="login" required><br>
-
-        <label for="pswd">Password:</label><br>
-        <input type="password" id="pswd" name="pswd" required><br>
-
-        <label for="cpswd">Confirm Password:</label><br>
-        <input type="password" id="cpswd" name="cpswd" required><br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="sex">Sex:</label><br>
-        <input type="radio" id="male" name="sex" value="female">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="sex" value="female">
-        <label for="female">Female</label><br>
-
-        <input type="submit" value="Submit">
-    </form>
+    <div class="task">
+        <div class="inp">
+            <label for="intervalFrom">From: </label>
+            <input type="text" name="intervalFrom" id="IntervalFrom"><br>
+            <label for="intervalTo">To: </label>
+            <input type="text" name="intervalTo" id="IntervalTo"><br>
+            <label for="step">Step: </label>
+            <input type="text" name="step" id="Step"><br>
+            <input class="butt" type="button" onclick="TabulateF()" value="Tabulate function">
+        </div>
+    </div>
+    <div class="showFunction">
+        <canvas id="MyCanvas"></canvas>
+    </div>
 </body>
 <script src="script/script.js"></script>
 </html>
