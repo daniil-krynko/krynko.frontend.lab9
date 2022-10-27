@@ -1,41 +1,17 @@
-function TabulateF() {
-    // y = ln ( x^2 + e^|x| + 1)
-    // m.log(m.pow(x, 2) + m.exp(m.abs(x)) + 1);
+let currentTime, birthday, difference;
+function Timer() {
+    currentTime = new Date(); // Берём нынешнее время
+    birthday = new Date(document.getElementById("Birthday").value); // День рождения
 
-    let h = 300, w = 500; // Height and width of canvas
-    let from = Number(document.getElementById("IntervalFrom").value);
-    let to = Number(document.getElementById("IntervalTo").value);
-    let step = Number(document.getElementById("Step").value);
-    let m = Math;
-    const whileLoop = [];
-    const dowhileLoop = [];
-    const forLoop = [];
+    if(birthday.getDate() <= currentTime.getDate()) // Если день рождения в этом году уже прошёл
+        birthday.setYear(currentTime.getFullYear() + 1); // переносим на год вперёд
 
-    /* While loop */
-    let x = from;
-    while (to >= x) {
-        whileLoop.push(m.log(m.pow(x, 2) + m.exp(m.abs(x)) + 1));
-        x += step;
-    }
-    console.log(`While loop: ${whileLoop}`);
+    difference = birthday.getTime() - currentTime; // Считаем разницу во времени в мс
+    document.getElementById("TimerToBirthday").innerText =
+        `${Math.floor(difference / (1000 * 60 * 60 * 24))}d : ${Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))}h : ${Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))}m : ${Math.floor((difference % (1000 * 60)) / 1000)}s`;
+    // Выводим таймер
+}
 
-    /* DoWhile loop */
-    x = from;
-    do {
-        dowhileLoop.push(m.log(m.pow(x, 2) + m.exp(m.abs(x)) + 1));
-        x += step;
-    } while (to >= x);
-    console.log(`DoWhile loop: ${dowhileLoop}`);
-
-    /* For loop */
-    x = from;
-    let ctx = document.getElementById("MyCanvas").getContext("2d");
-    ctx.beginPath();
-    ctx.moveTo(0, h/2);
-    for (i = 0; to >= x; x += step, i+= step){
-        forLoop.push(m.log(m.pow(x, 2) + m.exp(m.abs(x)) + 1));
-        ctx.lineTo(i, h/2 - forLoop[forLoop.length - 1]);
-    }
-    console.log(`For loop: ${forLoop}`);
-    ctx.stroke();
+function Start() {
+    setInterval(Timer, 1000);
 }
