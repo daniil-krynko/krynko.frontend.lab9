@@ -5,7 +5,11 @@ body{
 div{
     margin-bottom: 10px;
 }
-#TimerToBirthday{
+#Number{
+    font-size: xx-large;
+    color: lightgreen;
+}
+#Data{
     font-size: xx-large;
     color: red;
 }

@@ -1,17 +1,17 @@
-let currentTime, birthday, difference;
-function Timer() {
-    currentTime = new Date(); // Берём нынешнее время
-    birthday = new Date(document.getElementById("Birthday").value); // День рождения
-
-    if(birthday.getDate() <= currentTime.getDate()) // Если день рождения в этом году уже прошёл
-        birthday.setYear(currentTime.getFullYear() + 1); // переносим на год вперёд
-
-    difference = birthday.getTime() - currentTime; // Считаем разницу во времени в мс
-    document.getElementById("TimerToBirthday").innerText =
-        `${Math.floor(difference / (1000 * 60 * 60 * 24))}d : ${Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))}h : ${Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))}m : ${Math.floor((difference % (1000 * 60)) / 1000)}s`;
-    // Выводим таймер
+let K = prompt("Enter K");
+let size = 30;
+const arr = [];
+for (let i = 0; i < size; i++) {
+    arr.push(Math.floor(Math.random() * 101 - 50));
 }
 
-function Start() {
-    setInterval(Timer, 1000);
+let index = 0;
+while (index < size) {
+    if (K === arr[index]) {
+        document.getElementById("Number").innerText = `${index}:`;
+        document.getElementById("Data").innerText = `${arr[index]}`;
+        exit();
+    }
+    index++;
 }
+alert("K not found");
