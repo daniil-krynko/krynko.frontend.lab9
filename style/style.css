@@ -5,15 +5,12 @@ body{
 div{
     margin-bottom: 10px;
 }
+input{
+    margin-bottom: 10px;
+}
 .title{
     font-size: xx-large;
 }
 #Answer{
     font-size: xx-large;
-}
-#Number{
-    color: green;
-}
-#Data{
-    color: red;
 }
