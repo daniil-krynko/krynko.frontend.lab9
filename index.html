@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/style.css">
-    <title>Daniil Krynko 205. Lab 5</title>
+    <script src="script/script.js"></script>
+    <title>Daniil Krynko 205. Lab 8</title>
 </head>
 <body>
-    <div class="title">Enter email</div>
-    <input type="email" id="UserEmail"><br>
-    <button onclick="splitEmail()">Delete "@"-part</button>
-    <hr>
-    <div id="Answer">
-        <span id="Before">Answer will be here</span>
-        <span id="After"></span>
+    <div class="flex-container">
+        <div class="flex-item">
+            <div class="nickname">User</div>
+            <div class="score">0</div>
+            <div class="number">-</div>
+        </div>
+        <div class="flex-item">
+            <button disabled="disabled" class="generate">Generate</button>
+        </div>
+        <div class="flex-item">
+            <div class="nickname">Computer</div>
+            <div class="score">0</div>
+            <div class="number">-</div>
+        </div>
     </div>
 </body>
-<script src="script/script.js"></script>
 </html>
