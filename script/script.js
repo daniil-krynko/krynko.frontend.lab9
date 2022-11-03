@@ -5,27 +5,29 @@ if (userName != null) {
 let userNumber, compNumber, userScore = 0, compScore = 0;
 
 function Generate() {
+    if (userScore == 3) {
+        alert(`User won! After pressing "OK", site will reload`);
+        location.reload();
+    }
+    if (compScore == 3) {
+        alert(`Computer won! After pressing "OK", site will reload`);
+        location.reload();
+    }
+
     userNumber = Math.floor(Math.random() * 10);
     compNumber = Math.floor(Math.random() * 10);
     document.getElementById("UserNumber").innerText = userNumber;
     document.getElementById("CompNumber").innerText = compNumber;
     if (userNumber > compNumber) {
-        console.log("user+");
-        userScore++;
+        console.log(`user+ ${userNumber}:${compNumber}`);
+        document.getElementById("UserScore").innerText = ++userScore;
     }
     else if (userNumber < compNumber) {
-        console.log("comp+");
-        compNumber++;
+        console.log(`comp+ ${userNumber}:${compNumber}`);
+        document.getElementById("CompScore").innerText = ++compScore;
     }
     else {
-        console.log("draw");
+        console.log(`draw ${userNumber}:${compNumber}`);
         alert("DRAW");
-    }
-
-    if (userScore == 3) {
-        alert("User won!");
-    }
-    else {
-        alert("Computer won!")
     }
 }
