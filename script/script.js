@@ -1,12 +1,12 @@
 let userName = prompt("Enter your name");
-if (userName != null) {
+if (userName != null && userName != "") {
    document.getElementById("UserName").innerText = userName;
 }
 let userNumber, compNumber, userScore = 0, compScore = 0;
 
 function Generate() {
     if (userScore == 3) {
-        alert(`User won! After pressing "OK", site will reload`);
+        alert(`${document.getElementById("UserName").innerText} won! After pressing "OK", site will reload`);
         location.reload();
     }
     if (compScore == 3) {
