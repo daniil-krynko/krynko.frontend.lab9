@@ -1,7 +1,7 @@
-let userName = prompt("Enter your name");
-if (userName != null) {
-    document.getElementById("UserName").innerText = userName;
-}
+// let userName = prompt("Enter your name");
+// if (userName != null) {
+//     document.getElementById("UserName").innerText = userName;
+// }
 let userNumber, compNumber, userScore = 0, compScore = 0;
 
 function Generate() {

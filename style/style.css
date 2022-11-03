@@ -11,7 +11,6 @@ body {
     margin: 10px;
     cursor: pointer;
     align-self: center;
-    margin-top: 75%;
 }
 .nickname {
     margin: 15px;
@@ -20,14 +19,16 @@ body {
 .score {
     background-color: cyan;
     border-radius: 10px;
-    padding: 20px 10px;
+    padding: 10px 50px;
     margin: 10px;
 }
 .number {
     background-color: yellow;
     border-radius: 50%;
     border: 3px solid black;
-    padding: 50px;
+    padding: 30px;
+    vertical-align: bottom;
+    width: 40px;
     margin-bottom: 15px;
     font-size: xx-large;
     font-weight: bolder;
@@ -43,8 +44,7 @@ body {
 .flex-item {
     display: flex;
     flex-direction: column;
-    width: 150px;
-    height: 300px;
+    align-items: center;
     margin: 10px;
 }
 @media (max-width: 580px) {
