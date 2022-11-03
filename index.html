@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/style.css">
-    <title>Daniil Krynko 205. Lab 8</title>
+    <title>Daniil Krynko 205. Lab 9</title>
 </head>
 <body>
     <div class="flex-container">
         <div class="flex-item">
             <div class="nickname" id="UserName">User</div>
             <div class="score" id="UserScore">0</div>
-            <div class="number" id="UserNumber">-</div>
+            <svg width="170" height="245" class="card" id="UserCard"></svg>
         </div>
         <div class="flex-item">
+            <div class="title" id="RoundCnt"></div>
             <button onclick="Generate()" class="generate">Generate</button>
         </div>
         <div class="flex-item">
             <div class="nickname" id="CompName">Computer</div>
             <div class="score" id="CompScore">0</div>
-            <div class="number" id="CompNumber">-</div>
+            <svg width="170" height="245" class="card" id="CompCard"></svg>
         </div>
     </div>
 </body>

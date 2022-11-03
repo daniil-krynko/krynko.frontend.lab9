@@ -12,6 +12,9 @@ body {
     cursor: pointer;
     align-self: center;
 }
+.title {
+    font-size: larger;
+}
 .nickname {
     margin: 15px;
     font-size: x-large;
@@ -22,16 +25,8 @@ body {
     padding: 10px 50px;
     margin: 10px;
 }
-.number {
-    background-color: yellow;
-    border-radius: 50%;
-    border: 3px solid black;
-    padding: 30px;
-    vertical-align: bottom;
-    width: 40px;
+.card {
     margin-bottom: 15px;
-    font-size: xx-large;
-    font-weight: bolder;
 }
 
 .flex-container {
