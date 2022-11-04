@@ -8,10 +8,12 @@ function Generate() {
     if (userScore == 3) {
         alert(`${document.getElementById("UserName").innerText} won! After pressing "OK", site will reload`);
         location.reload();
+        return;
     }
     if (compScore == 3) {
         alert(`Computer won! After pressing "OK", site will reload`);
         location.reload();
+        return;
     }
 
     userNumber = Math.floor(Math.random() * 10);
